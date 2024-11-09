@@ -1,0 +1,29 @@
+
+package main
+
+import "fmt"
+
+func main() {
+	var id,age,cpf int
+	var name,location string
+	var income float
+	var PERSONAL,GUARANTEED,CONSIGNMENT bool = false,false.false
+	fmt.println("digite seu nome , idade, cpf , salario e localidade") 
+	fmt.scanln
+	
+	
+	if(income<3000){
+	PERSONA=GUARENTEED=TRUE
+	}	
+	else if(income<5000){
+		if(age<30 && location==SP)
+		PERSONA=GUARENTEED=TRUE
+		}
+	else
+	CONSIGNMENT=TRUE
+	}
+	
+	fmt.println("%s você tem acesso ao emprestimo "name
+	
+}
+
