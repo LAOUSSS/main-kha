@@ -23,7 +23,14 @@ func main() {
 	CONSIGNMENT=TRUE
 	}
 	
-	fmt.println("%s você tem acesso ao emprestimo "name
-	
+	fmt.println("%s você tem acesso  "name)
+	If(CONSIGNMENT==true) {
+           fmt.println("ao empréstimo consignado com 2% de juros/n")}
+        If (PERSONA==true ) {
+           fmt.println("ao empréstimo pessoal com 4% de juros/n")
+        If (GUARANTEED==true ){
+           fmt.println("ao empréstimo com garantia de 3% de juros/n")
+        If(GUARANTEED==false && PERSONA==false && CONSIGNMENT==false) {
+           fmt.println("a nenhum empréstimo")
 }
 
