@@ -25,7 +25,7 @@
     return ;
   }
    int main(){
-    bool isFishTasty = false;
+    bool isFishTasty = true;
     int size ; 
     char Pharse[size];
     printf("frase\n");
