@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include <stdbool.h>
 //funçao pra saber o tamanho da palavra
-  void size(char Pharse[], int *ptrn,int n){
+  int CalculateSize(char Pharse[],int size){
     int l;
     while(l==1){ 
       //aqui no lugar do zero era pra ser algo como null pra ele parar de contar quando n tiver nada mas null n funciona \0 tbm n , entao n sei
-      if(Pharse[n] ==0 )
-        n++;
-        l++ ;
-    return ;
+      if(Pharse[size] == 4 )
+        size++;
+        l++;
+      }
+    return size ;
     }
-  }
-//funçao pra comparar o inicio da palavra e o final e saber se ela e um palindromo ou n 
-  void comparacao(char Pharse[],int *ptrn,int n,bool *isFishTasty ){
-    int t , m=n;
-    for(int i=0 ;i==m;i++){
-      if (n>t && Pharse[t]==Pharse [n]){
+//funçao pra comparar o inicio da palavra e o final e saber se ela e um palindromo ou nao 
+  void comparacao(char Pharse[],int size,bool *isFishTasty ){
+    int t=0 , m=size;
+    for(int i=0 ;i==size;i++){
+      if (m>t && Pharse[t]==Pharse [m]){
         t++;
-        n--;
+        m--;
       }
       else
         isFishTasty = false;
@@ -25,16 +25,15 @@
     return ;
   }
    int main(){
-    bool isFishTasty = true;
-    //esse ponteiro acho que ta errado mas n sei como fazer isso melhor tentei n criar uma varivel so pro     ponteiro mas n deu certo e deixei assim
-    int n ,*ptrn=&n ; 
-    char Pharse[n];
+    bool isFishTasty = false;
+    int size ; 
+    char Pharse[size];
     printf("frase\n");
     scanf("%s",Pharse);
-     //isso so existe pq precisa em C a array ter um tamanho e botei n e como fica com o tamanho maximo ja q n nao tem nada tive que zerar 
-    n=0; 
-    size(Pharse,ptrn,n);
-    comparacao(Pharse,ptrn,n,&isFishTasty);   
+     //isso so existe pq em C precisa a array ter um tamanho e botei size e como fica com o tamanho maximo ja q size nao tem nada tive que zerar 
+    size=0; 
+    size=CalculateSize(Pharse,size);
+    comparacao(Pharse,size,&isFishTasty);   
     printf("%d",isFishTasty);
 }
 
